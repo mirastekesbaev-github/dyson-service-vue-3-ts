@@ -9,7 +9,6 @@ import Footer from './components/Footer.vue'
   <main>
     <div class="container"></div>
   </main>
-  <Footer></Footer>
 </template>
 
 <style lang="scss" scoped>
