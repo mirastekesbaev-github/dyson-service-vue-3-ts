@@ -50,8 +50,8 @@
 
   // Top
   &t0 { padding-top: 0; }
-  @for $i from 1 through 5 {
-    &t#{1 * $i} { padding-top: 10px * $i; }
+  @for $i from 1 through 10 {
+    &t#{1 * $i} { padding-top: 1px * $i; }
   }
 
   // Right

@@ -1,7 +1,7 @@
 <template>
-  <header class="header">
+  <header class="header pt10 pb10">
     <div class="container">
-      <div class="header__body flex aic jcsb">
+      <div class="header__body flex aic jcsb pt10 pb1">
         <div class="header__logo">
           <img src="../../src/assets/img/dyson-logo.png" alt="dyson">
         </div>
@@ -21,9 +21,11 @@
             </li>
           </ul>
         </nav>
-        <div class="header__callback flex aic jcsb">
-          <div>
-            <div class="header__contact">+7 707 555-30-27</div>
+        <div class="flex aic jcsb">
+          <div class="mr10">
+            <div class="header__contact mb6">
+              <a href="tel: +7 707 555-30-27">+7 707 555-30-27</a>
+            </div>
             <div class="header__timetable">Работаем с 9:00 до 20:00</div>
           </div>
           <button class="header__button">Перезвоните мне</button>
@@ -35,10 +37,6 @@
 
 <style lang="scss" scoped>
 .header {
-  padding: {
-    top: 10px;
-    bottom: 10px;
-  }
 
   &__logo {
     width: 100px;
@@ -66,6 +64,16 @@
     }
   }
 
+  &__contact {
+    display: block;
+
+    a {
+      font-size: 24px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+  }
+
   &__button {
     cursor: pointer;
     text-decoration: none;
@@ -78,9 +86,14 @@
     border-radius: 50px;
     font-size: 16px;
     font-weight: 600;
+    transition: .2s linear;
 
     &:hover {
-      background-color: red;
+      opacity: 0.7;
+    }
+
+    &:active {
+      transform: scale(0.96);
     }
   }
 }
