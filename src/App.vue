@@ -1,16 +1,33 @@
 <script setup lang="ts">
-import Header from './components/HeaderCompnent.vue'
-import Footer from './components/FooterComponent.vue'
-
+import HeaderComponent from './components/HeaderCompnent.vue'
+import FooterComponent from './components/FooterComponent.vue'
+import StartSection from './components/sections/StartSection.vue'
+import ProductSection from './components/sections/ProductSection.vue'
+import PriceSection from './components/sections/PriceSection.vue'
+import InfoSection from './components/sections/InfoSection.vue'
+import OrderSection from './components/sections/OrderSection.vue'
+import FacilitySection from './components/sections/FacilitySection.vue'
+import QuerySection from './components/sections/QuerySection.vue'
+import CommentSection from './components/sections/CommentSection.vue'
+import ContactSection from './components/sections/ContactSection.vue'
 </script>
 
 <template>
-  <Header></Header>
+  <HeaderComponent />
   <main>
-    <div class="container"></div>
+    <StartSection />
+    <ProductSection />
+    <PriceSection />
+    <InfoSection />
+    <OrderSection />
+    <FacilitySection />
+    <QuerySection />
+    <CommentSection />
+    <ContactSection />
   </main>
-  <Footer></Footer>
+  <FooterComponent />
 </template>
 
 <style lang="scss" scoped>
+
 </style>
