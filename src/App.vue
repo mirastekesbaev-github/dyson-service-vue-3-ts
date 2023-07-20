@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Header from './components/HeaderCompnent.vue'
-import Footer from './components/Footer.vue'
+import Footer from './components/FooterComponent.vue'
 
 </script>
 
@@ -9,6 +9,7 @@ import Footer from './components/Footer.vue'
   <main>
     <div class="container"></div>
   </main>
+  <Footer></Footer>
 </template>
 
 <style lang="scss" scoped>

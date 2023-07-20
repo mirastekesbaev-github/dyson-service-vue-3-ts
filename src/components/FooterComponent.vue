@@ -1,11 +1,11 @@
 <template>
-  <header class="header pt10 pb10">
+  <footer class="footer pt10 pb10">
     <div class="container">
-      <div class="header__body flex aic jcsb pt10 pb10">
-        <div class="header__logo">
+      <div class="footer__body flex aic jcsb pt10 pb10">
+        <div class="footer__logo">
           <img src="../../src/assets/img/dyson-logo.png" alt="dyson">
         </div>
-        <nav class="header__menu">
+        <nav class="footer__menu">
           <ul class="list flex aic">
             <li class="item">
               <a href="#" class="item-link">Что сломалось?</a>
@@ -22,21 +22,20 @@
           </ul>
         </nav>
         <div class="flex aic jcsb">
-          <div class="mr10 pr10">
-            <div class="header__contact mb10">
+          <div>
+            <div class="footer__contact mb10">
               <a href="tel: +7 707 555-30-27">+7 707 555-30-27</a>
             </div>
-            <div class="header__timetable">Работаем с 9:00 до 20:00</div>
+            <div class="footer__timetable">Работаем с 9:00 до 20:00</div>
           </div>
-          <button class="header__button">Перезвоните мне</button>
         </div>
       </div>
     </div>
-  </header>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
-.header {
+.footer {
   &__logo {
     width: 100px;
     height: 38px;
@@ -123,6 +122,10 @@
     &:active {
       transform: scale(0.96);
     }
+  }
+
+  @media screen {
+
   }
 }
 </style>
