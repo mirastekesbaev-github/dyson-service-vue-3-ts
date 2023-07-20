@@ -4,32 +4,34 @@ import ButtonComponent from '@/components/ButtonComponent.vue'
 
 <template>
   <section id="start-section">
-    <div class="container">
-      <div class="content">
-        <h2>Ремонт телевизоров на дому с гарантией 3 года</h2>
+    <div class="container h100">
+      <div class="content h100 flex fdc jcc">
+        <h2 class="title">Ремонт телевизоров на дому с гарантией 3 года</h2>
         <ul class="list">
-          <li>
+          <li class="item">
             <span></span>
-            <p>Бесплатный выезд мастера на дом</p>
+            <p class="text">Бесплатный выезд мастера на дом</p>
           </li>
-          <li>
+          <li class="item">
             <span></span>
-            <p>Бесплатная диагностика за 15 мин</p>
+            <p class="text">Бесплатная диагностика за 15 мин</p>
           </li>
-          <li>
+          <li class="item">
             <span></span>
-            <p>Ремонт за 1 день</p>
+            <p class="text">Ремонт за 1 день</p>
           </li>
-          <li>
+          <li class="item">
             <span></span>
-            <p>Бесплатная доставка в сервис и обратно</p>
+            <p class="text">Бесплатная доставка в сервис и обратно</p>
           </li>
-          <li>
+          <li class="item">
             <span></span>
-            <p>Оригинальные запчасти для всех моделей</p>
+            <p class="text">Оригинальные запчасти для всех моделей</p>
           </li>
         </ul>
-        <ButtonComponent btn-name="Вызвать мастера" />
+        <div>
+          <ButtonComponent btn-name="Вызвать мастера" />
+        </div>
       </div>
     </div>
   </section>
@@ -41,6 +43,39 @@ import ButtonComponent from '@/components/ButtonComponent.vue'
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 86px);
+
+  .content {
+    .title {
+      margin-bottom: 16px;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 100%;
+    }
+
+    .list {
+      margin-bottom: 22px;
+      .item {
+        position: relative;
+        padding-left: 42px;
+        .text {
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 126%;
+        }
+      }
+
+      .item::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-image: url("src/assets/icons/check-double-line.svg");
+      }
+    }
+  }
 }
 </style>

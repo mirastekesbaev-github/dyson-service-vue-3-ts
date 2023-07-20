@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ButtonComponent from '@/components/ButtonComponent.vue'
+</script>
+
 <template>
   <header class="header pt10 pb10">
     <div class="container">
@@ -28,7 +32,7 @@
             </div>
             <div class="header__timetable">Работаем с 9:00 до 20:00</div>
           </div>
-          <button class="header__button">Перезвоните мне</button>
+          <ButtonComponent btn-name="Перезвоните мне" />
         </div>
       </div>
     </div>
@@ -37,6 +41,8 @@
 
 <style lang="scss" scoped>
 .header {
+  height: 86px;
+
   &__logo {
     width: 100px;
     height: 38px;
@@ -102,27 +108,6 @@
 
   &__timetable {
     text-align: right;
-  }
-
-  &__button {
-    cursor: pointer;
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(21deg, #dd03e4, #5611ec);
-    display: inline-block;
-    position: relative;
-    padding: 14px 26px;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: .2s linear;
-    &:hover {
-      opacity: 0.7;
-    }
-    &:active {
-      transform: scale(0.96);
-    }
   }
 }
 </style>
