@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer__body flex aic jcsb pt10 pb10">
         <div class="footer__logo">
-          <img src="../../src/assets/img/dyson-logo.png" alt="dyson">
+          <img src="../../assets/img/dyson-logo.png" alt="dyson">
         </div>
         <nav class="footer__menu">
           <ul class="list flex aic">
