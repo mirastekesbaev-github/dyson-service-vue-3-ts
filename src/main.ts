@@ -3,6 +3,7 @@ import { createPinia } from 'pinia'
 
 import './assets/main.scss'
 import './assets/css/bootstrap-grid.min.css'
+import 'vue3-carousel/dist/carousel.css'
 
 import App from './App.vue'
 import router from './router'
