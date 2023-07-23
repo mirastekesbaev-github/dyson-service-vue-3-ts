@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 
+onMounted(() => {
+  console.log('created');
+  
+}) 
 </script>
 
 <template>
@@ -52,7 +57,12 @@
               </div>
             </div>
             <div class="body-right col-xxl-6">
-              <div id="map-test" class="map"></div>
+              <iframe 
+                src="https://yandex.com/map-widget/v1/?um=constructor%3Ae2feed00af6c44b057f2549839226e528ed612e1b16f7b3970c07d8a40b57137&amp;source=constructor" 
+                width="100%" 
+                height="544" 
+                frameborder="0">
+              </iframe>
             </div>
           </div>
         </div>
