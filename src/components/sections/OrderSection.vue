@@ -3,7 +3,7 @@ import ButtonComponent from '@/components/ButtonComponent.vue'
 </script>
 
 <template>
-  <section id="order-section">
+  <section id="order-section" ref="orderSection">
     <div class="container">
       <div class="content">
         <div class="content__header">
@@ -50,7 +50,7 @@ import ButtonComponent from '@/components/ButtonComponent.vue'
         &__field {
           position: relative;
           margin-right: 12px;
-          
+
           .label {
             position: absolute;
             top: -24px;
@@ -62,7 +62,7 @@ import ButtonComponent from '@/components/ButtonComponent.vue'
             font-size: 16px;
             border: none;
             outline: none;
-            border-radius: 6px; 
+            border-radius: 6px;
           }
         }
       }
