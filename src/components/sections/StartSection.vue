@@ -82,7 +82,7 @@ const scroll = () => {
 #start-section {
   z-index: 0;
   position: relative;
-  background-image: url("src/assets/img/dyson7.3.jpg");
+  background-image: url("@/assets/img/background-blur.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 86px);
