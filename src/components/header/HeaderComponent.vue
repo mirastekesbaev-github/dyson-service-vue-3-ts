@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useModal } from 'vue-final-modal'
 import ButtonComponent from '@/components/ButtonComponent.vue'
-import ButtonPhoneComponent from '@/components/ButtonPhoneComponent.vue'
+import HeaderPhoneComponent from '@/components/header//HeaderPhoneComponent.vue'
+import HeaderCallbackComponent from '@/components/header/HeaderCallbackComponent.vue'
+import ModalComponent from '@/components/ModalComponent.vue'
 
 interface IMenu {
   href: string,
@@ -28,6 +31,10 @@ const menu: IMenu[] = [
     name: 'Адрес'
   }
 ]
+
+const { open } = useModal({
+  component: ModalComponent
+})
 </script>
 
 <template>
@@ -49,12 +56,18 @@ const menu: IMenu[] = [
             </div>
           </div>
         </div>
-        <nav class="header__burger-menu" :class="{ 'active': show }">
+        <nav class="header__burger-menu flex fdc jcsb" :class="{ 'active': show }">
           <ul class="list">
             <li v-for="item in menu" class="item">
               <a :href="item.href" class="item-link">{{ item.name }}</a>
             </li>
           </ul>
+
+          <div class="db pl8 pr8">
+            <HeaderCallbackComponent text-align="tal"/>
+            <span class="db mt10 pt6"></span>
+            <ButtonComponent btn-name="Перезвоните мне" font-size="14px" />
+          </div>
         </nav>
         <nav class="header__menu">
           <ul class="list flex aic">
@@ -63,22 +76,15 @@ const menu: IMenu[] = [
             </li>
           </ul>
         </nav>
-        <div class="header__callback flex aic jcsb">
+        <div class="header__right flex aic jcsb">
           <div class="mr10 pr10">
-            <div class="header__contact mb8">
-              <a href="tel: +7 707 555-30-27">
-                +7 707 555-30-27
-              </a>
-            </div>
-            <div class="header__timetable tar">
-              Работаем с 9:00 до 20:00
-            </div>
+            <HeaderCallbackComponent />
           </div>
           <div class="header__button">
-            <ButtonComponent btn-name="Перезвоните мне" />
+            <ButtonComponent btn-name="Перезвоните мне" @click="() => open()" />
           </div>
           <div class="header__phone-button">
-            <ButtonPhoneComponent />
+            <HeaderPhoneComponent />
           </div>
         </div>
       </div>
@@ -187,7 +193,7 @@ const menu: IMenu[] = [
     width: 360px;
     height: calc(100vh - 86px);
     padding: 24px 34px;
-    background-color: lightblue;
+    background-color: #fff;
     transition: .4s ease-out;
     transform: translateX(100%);
 
@@ -248,22 +254,6 @@ const menu: IMenu[] = [
       }
     }
   }
-
-  &__contact {
-    display: block;
-    a {
-      font-size: 24px;
-      font-weight: 900;
-      color: $gray900;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  &__timetable {
-    font-size: 14px;
-  }
 }
 
 // max-width
@@ -281,7 +271,7 @@ const menu: IMenu[] = [
       display: none;
     }
 
-    &__callback {
+    &__right {
       display: none;
     }
   }

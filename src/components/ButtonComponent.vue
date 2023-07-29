@@ -1,18 +1,23 @@
 <script setup lang="ts">
 interface Props {
   btnName: string,
-  fontSize?: string
+  fontSize?: string,
+  display?: string
 }
 
 withDefaults(defineProps<Props>(), {
-  fontSize: '16px'
+  fontSize: '16px',
+  display: 'inline-block'
 })
 </script>
 
 <template>
   <button 
     class="button-component"
-    :style="{ fontSize: fontSize }"
+    :style="{ 
+      fontSize: fontSize,
+      width: display === 'block' ? '100%' : ''
+    }"
   >
     {{ btnName }}
   </button>

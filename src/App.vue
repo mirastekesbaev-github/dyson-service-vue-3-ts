@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ModalsContainer } from 'vue-final-modal'
 import HeaderComponent from './components/header/HeaderComponent.vue'
 import FooterComponent from './components/footer/FooterComponent.vue'
 import StartSection from './components/sections/StartSection.vue'
@@ -11,6 +12,7 @@ import ContactSection from './components/sections/ContactSection.vue'
 
 <template>
   <HeaderComponent />
+  <ModalsContainer />
 </template>
 
 <style lang="scss" scoped>

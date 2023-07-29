@@ -123,3 +123,15 @@
     text-align: right;
   }
 }
+
+.d {
+  &b {
+    display: block;
+  }
+  &i {
+    display: inline;
+  }
+  &ib {
+    display: inline-block;
+  }
+}
