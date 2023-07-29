@@ -11,6 +11,15 @@ const { icon } = toRefs(props)
 </script>
 
 <template>
+    <main>
+    <StartSection />
+    <ProductSection />
+    <OrderSection />
+    <FacilitySection />
+    <QuerySection />
+    <ContactSection />
+  </main>
+  <FooterComponent />
   <div class="facility-item flex fdc aic">
     <div v-if="icon === 'tools'" class="facility-item__icon red">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HeaderComponent from './components/header/HeaderCompnent.vue'
+import HeaderComponent from './components/header/HeaderComponent.vue'
 import FooterComponent from './components/footer/FooterComponent.vue'
 import StartSection from './components/sections/StartSection.vue'
 import ProductSection from './components/sections/ProductSection.vue'
@@ -11,15 +11,6 @@ import ContactSection from './components/sections/ContactSection.vue'
 
 <template>
   <HeaderComponent />
-  <main>
-    <StartSection />
-    <ProductSection />
-    <OrderSection />
-    <FacilitySection />
-    <QuerySection />
-    <ContactSection />
-  </main>
-  <FooterComponent />
 </template>
 
 <style lang="scss" scoped>

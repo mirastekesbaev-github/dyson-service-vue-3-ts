@@ -1,11 +1,21 @@
 <script setup lang="ts">
-defineProps<{
-  btnName: string
-}>()
+interface Props {
+  btnName: string,
+  fontSize?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  fontSize: '16px'
+})
 </script>
 
 <template>
-  <button class="button-component">{{ btnName }}</button>
+  <button 
+    class="button-component"
+    :style="{ fontSize: fontSize }"
+  >
+    {{ btnName }}
+  </button>
 </template>
 
 <style lang="scss" scoped>
@@ -16,10 +26,9 @@ defineProps<{
   background: linear-gradient(21deg, #dd03e4, #5611ec);
   display: inline-block;
   position: relative;
-  padding: 14px 26px;
+  padding: 12px 24px;
   border: none;
   border-radius: 50px;
-  font-size: 16px;
   font-weight: 600;
   transition: .2s linear;
   &:hover {
